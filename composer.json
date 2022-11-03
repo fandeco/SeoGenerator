@@ -1,7 +1,6 @@
 {
-    "name": "webnitros/app",
+    "name": "webnitros/seogenerator",
     "license": "MIT",
-    "version": "1.1.2",
     "authors": [
         {
             "name": "webnitros",
@@ -10,16 +9,14 @@
     ],
     "scripts": {
         "tests" : "phpunit --bootstrap bootstrap.php",
-        "up:release": "gh release create \"v1.0.2\" --generate-notes"
+        "up:release": "gh release create \"v1.0.0\" --generate-notes"
     },
     "keywords": [
         "client"
     ],
     "require": {
         "php": ">=7.4",
-        "symfony/dotenv": "^5.2",
         "wapmorgan/morphos": "^3.2",
-        "guzzlehttp/guzzle": "^7.5",
         "cijic/phpmorphy": "^0.3.1",
         "fenom/fenom": "^2.12"
     },
