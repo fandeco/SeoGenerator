@@ -60,11 +60,11 @@ $text = $Builder->build();
   "repositories": [
     {
       "type": "vcs",
-      "url": "https://github.com/webnitros/app"
+      "url": "https://github.com/webnitros/seogenerator"
     }
   ],
   "require": {
-    "webnitros/app": "^1.0.0"
+    "webnitros/seogenerator": "^1.0.0"
   }
 }
 ```
