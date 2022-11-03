@@ -6,7 +6,7 @@
  * Time: 10:38
  */
 
-namespace App\Abstracts;
+namespace SeoGenerator\Abstracts;
 
 abstract class Method
 {

@@ -6,7 +6,7 @@
  * Time: 10:33
  */
 
-namespace App\Exceptions;
+namespace SeoGenerator\Exceptions;
 
 
 use Exception;

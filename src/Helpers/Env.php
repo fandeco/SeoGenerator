@@ -1,7 +1,7 @@
 <?php
 declare(strict_types=1);
 
-namespace App\Helpers;
+namespace SeoGenerator\Helpers;
 
 use Symfony\Component\Dotenv\Dotenv;
 use Throwable;
