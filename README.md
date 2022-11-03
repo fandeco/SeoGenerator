@@ -42,23 +42,15 @@ $Builder = new Builder([
     'snippets' => $snippets
 ]);
 
+$text = $Builder->build();
 
-$text = [];
+/*
+Было
+Коллекция FURORE и модель A3990LM-6CC итальянского производителя Arte Lamp разработана для интерьера гостиной в неоклассическом стиле.
 
-// Получаем все сниппеты
-$snippets = $Builder->snippets()->all();
-// Сортируем по позиции start
-usort($snippets, 'cmp_object_positions');
-foreach ($snippets as $snippet) {
-    // Обрабатываем только основные снипеты main=1
-    if ($snippet->get('main')) {
-        $text[$snippet->key()] = [
-            'result' => $Builder->parser()->process($snippet), // результат
-            'cases' => $snippet->cases(), // причины почему сниппет не собрался
-        ];
-    }
-}
-  
+Стало
+- Коллекция REVOLUTION и модель A3990LM-6CC итальянского производителя Arte Lamp разработана для интерьера гостиной в неоклассическом стиле.
+*/
 ```
 
 ## Подключения в composer.json
