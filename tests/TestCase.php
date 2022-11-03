@@ -22,7 +22,7 @@ abstract class TestCase extends MockeryTestCase
     public static function texts($name = 'first')
     {
         $texts = file_get_contents(dirname(__FILE__, 1) . '/texts/' . $name . '.json');
-        return \GuzzleHttp\json_decode($texts, 1);
+        return json_decode($texts, 1);
     }
 
     public function snippetsFull()

@@ -1,16 +1,4 @@
 <?php
-
-
-/* Именительный */
-const CASE_NOMN = 'nomn'; // Именительный
-const CASE_GENT = 'gent'; // Родительный
-const CASE_DATV = 'datv'; // Дательный
-const CASE_ACCS = 'accs'; // Винительный
-const CASE_ABLT = 'ablt'; // Творительный
-const CASE_LOCT = 'loct'; // Предложный
-const CASE_VOCT = 'voct'; // Звательный
-
-
 /**
  * Created by Andrey Stepanenko.
  * User: webnitros

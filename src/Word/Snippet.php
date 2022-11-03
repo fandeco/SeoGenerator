@@ -260,7 +260,6 @@ class Snippet
                     // Если наступила причина то генерируем произвольные цифры для замены
                     if ($snip->get('cases')) {
                         #$result = str_repeat("^", $this->length()); // на всю область заменяемог сниппета
-
                         $beginning = $this->beginning() . $raw;
                         $replace = mb_substr_replace($beginning, $result, $snip->start(), $snip->length());
                         $raw = str_ireplace('^', '', $replace);
