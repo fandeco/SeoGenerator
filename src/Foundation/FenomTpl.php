@@ -46,12 +46,14 @@ class FenomTpl extends Service
                 throw new \RuntimeException(sprintf('Directory "%s" was not created', $concurrentDirectory));
             }
         }
-
-        $name = !empty($_REQUEST['q']) ? md5($_REQUEST['q']) : 'temp';
-        file_put_contents(FENOM_RESOURCES . '/template/' . $name . '.tpl', $content);
-        $Template = $this->fenom->getTemplate($name . '.tpl');
-        $body = $Template->fetch($vars);
-        $this->fenom->clearAllCompiles();
+        $Template = $this->fenom->compileCode($content);
+        $body = '';
+        if ($Template instanceof Fenom\Template) {
+            if (!empty($vars) && is_array($vars)) {
+                $body = $Template->fetch($vars);
+                $this->fenom->clearAllCompiles();
+            }
+        }
         return $body;
     }
 }
