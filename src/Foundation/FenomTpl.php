@@ -35,17 +35,11 @@ class FenomTpl extends Service
 
     public function tpl($content, $arrays = null)
     {
-
         $vars = $this->builder->variable()->toArray();
         if (!is_null($arrays)) {
             $vars = array_merge($vars, $arrays);
         }
 
-        if (!file_exists(FENOM_RESOURCES . '/template')) {
-            if (!mkdir($concurrentDirectory = FENOM_RESOURCES . '/template') && !is_dir($concurrentDirectory)) {
-                throw new \RuntimeException(sprintf('Directory "%s" was not created', $concurrentDirectory));
-            }
-        }
         $Template = $this->fenom->compileCode($content);
         $body = '';
         if ($Template instanceof Fenom\Template) {
