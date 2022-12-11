@@ -47,8 +47,9 @@ class FenomTpl extends Service
             }
         }
 
-        file_put_contents(FENOM_RESOURCES . '/template/temp.tpl', $content);
-        $Template = $this->fenom->getTemplate('temp.tpl');
+        $name = !empty($_REQUEST['q']) ? md5($_REQUEST['q']) : 'temp';
+        file_put_contents(FENOM_RESOURCES . '/template/' . $name . '.tpl', $content);
+        $Template = $this->fenom->getTemplate($name . '.tpl');
         $body = $Template->fetch($vars);
         $this->fenom->clearAllCompiles();
         return $body;
